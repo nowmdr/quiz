@@ -1,0 +1,45 @@
+@import '../../../../theme/variables.scss';
+.check{
+    width: 100%;
+    height: 100%;
+    &-label{
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+    }
+    &-input{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        &:checked + .check-box{
+            .check-card{
+                background-color: $answer-background;
+                border-color: $answer-border;
+            }
+        }
+        &:hover + .check-box{
+            .check-card{
+                box-shadow: $custom-gray-shadow;
+            }
+        }
+    }
+    &-card{
+        min-height: 250px;
+        @include breakpoint(sm) {
+            min-height: 200px
+        }
+        @extend %check-card;
+        &__title{
+            color: $regular;
+        }
+        &__img{
+            width: 25%;
+            height: auto;
+            margin-bottom: 30px;
+            margin-top: 60px;
+        }
+    }
+}

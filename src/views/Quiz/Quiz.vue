@@ -3,7 +3,7 @@
     <div class="quiz-layout">
       <QuizHeader />
       <div class="quiz-body">
-        <Questions />
+        <Questions :question="getQuestions[0]" />
       </div>
       <QuizFooter />
     </div>
@@ -16,5 +16,13 @@ import QuizFooter from "@/components/quiz-components/quiz-main-layout/quiz-foote
 import Questions from "@/components/quiz-components/questions/Questions.vue";
 export default {
   components: { QuizHeader, QuizFooter, Questions },
+  data:()=>({
+    
+  }),
+  computed:{
+    getQuestions(){
+      return this.$store.getters.questions
+    }
+  }
 };
 </script>
