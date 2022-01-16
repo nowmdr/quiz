@@ -1,0 +1,123 @@
+$white-color: #fff;
+$background-color: #f9f9fb;
+$regular: #293358;
+$regular-ligth: #5b6280;
+$regular-hover: #81a78f;
+$link: #8d8cb2;
+$title: #15276c;
+$custom-gray: #c9ccd9;
+$custom-gray-shadow: #e4e6ec;  
+$footer-gray:  #bbbcc0;
+
+$answer-border: #77b497;
+$answer-background: #f2f8f5;
+$quiz-body-background:#f9f9fb;
+
+//font-size
+$main-question-title: 48px;
+$main-title: 22px;
+$main-regular: 16px;
+$main-small: 14px;
+//font-size mobile
+$main-question-title-mob: 30px;
+$main-title-mob: 20px;
+$main-regular-mob: 14px;
+$main-small-mob: 12px;
+
+@mixin breakpoint($point) {
+    @if $point == lg {
+      @media (max-width: 992px) {
+        @content;
+      }
+    } @else if $point == md {
+      @media (max-width: 768px) {
+        @content;
+      }
+    } @else if $point == sm {
+      @media (max-width: 576px) {
+        @content;
+      }
+    } @else if $point == xs {
+      @media (max-width: 320px) {
+        @content;
+      }
+    }
+  }
+
+//fonts
+%font-size-regular {
+    font-size: $main-regular;
+    @include breakpoint(sm) {
+      font-size: $main-regular-mob;
+    }
+    @include breakpoint(xs) {
+      font-size: $main-regular-mob;
+    }
+  }
+  %font-size-title {
+    font-size: $main-title;
+    @include breakpoint(sm) {
+      font-size: $main-title-mob;
+    }
+    @include breakpoint(xs) {
+      font-size: $main-title-mob;
+    }
+  }
+  %font-size-small {
+    font-size: $main-small;
+    @include breakpoint(sm) {
+      font-size: $main-small-mob;
+    }
+    @include breakpoint(xs) {
+      font-size: $main-small-mob;
+    }
+  }
+  %font-question-title {
+    font-size: $main-question-title;
+    @include breakpoint(md) {
+      font-size: $main-question-title-mob;
+    }
+    @include breakpoint(xs) {
+      font-size: $main-question-title-mob;
+    }
+  }
+
+%font-family-regular {
+    font-family: "Amiko", sans-serif;
+  }
+  
+  %font-family-title {
+    font-family: "Abhaya Libre", serif;
+  }
+
+%question-title{
+    color: $title;
+    @extend %font-question-title;
+}
+  %links {
+    @extend %font-family-regular;
+    @extend %font-size-regular;
+    font-weight: bold;
+    color: $regular-ligth;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  
+    &:hover {
+      color: $regular-hover;
+    }
+  }
+
+
+
+  @include breakpoint(lg){
+
+}
+@include breakpoint(md){
+
+}
+@include breakpoint(sm){
+  
+}
+@include breakpoint(xs){
+
+}

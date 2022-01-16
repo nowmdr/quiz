@@ -1,0 +1,9 @@
+@import '../../../theme/variables.scss';
+.question{
+    &__title{
+        @extend %question-title;
+    }
+    &__options{
+        display: flex;
+    }
+}

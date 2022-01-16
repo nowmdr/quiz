@@ -1,0 +1,40 @@
+@import "./../../../../theme/variables.scss";
+.quiz-header {
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  height: 80px;
+  @include breakpoint(md) {
+    padding: 0 20px;
+  }
+}
+.quiz-logo {
+  svg {
+    width: auto;
+    height: 40px;
+    @include breakpoint(md) {
+      height: 32px;
+    }
+  }
+}
+.quiz-terms {
+  margin-left: auto;
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    margin-right: 20px;
+    @include breakpoint(md) {
+      display: none;
+    }
+    &:last-child {
+      margin-right: 0;
+      width: 32px;
+      height: 32px;
+      @include breakpoint(md) {
+        display: block;
+      }
+    }
+  }
+}
