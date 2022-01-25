@@ -5,40 +5,104 @@ export default {
         title: "Select your gender",
         options: [
           {
-            name: "Male",
+            text: "Male",
             urlImg:
               "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/man-health-worker_1f468-200d-2695-fe0f.png",
           },
           {
-            name: "Female",
+            text: "Female",
             urlImg:
               "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/pregnant-woman_1f930.png",
           },
         ],
       },
       {
-        title: "What is your age?",
+        title: "Motivation",
+        description: "Do you agree with the statement below?",
+        statement: {
+          text: "Sometimes I need a friendly push to keep moving forward. I can stop if I feel tired.",
+          color: "#8e96ea",
+        },
         options: [
           {
-            name: "20s",
+            text: "Yes",
+          },
+          {
+            text: "No",
+          },
+        ],
+      },
+      {
+        img: "https://selfgrowthplan.com/static/book-1-c700479daac5af16d24f8284eba55608.png",
+        title: "Does this book seem interesting to you?",
+        options: [
+          {
+            text: "Yes",
+          },
+          {
+            text: "No",
+          },
+        ],
+      },
+      {
+        title: "What is your age?",
+        mode: true,
+        options: [
+          {
+            answerTitle: "20s",
             description: "18—29 years",
           },
           {
-            name: "30s",
+            answerTitle: "30s",
             description: "30—39 years",
           },
           {
-            name: "40s",
+            answerTitle: "40s",
             description: "40—49 years",
           },
           {
-            name: "50+",
+            answerTitle: "50+",
+          },
+        ],
+      },
+      {
+        title: "Set your goal on timing",
+        description: "Pick the amount of time you will spend on self-development daily",
+        mode: true,
+        options: [
+          {
+            urlImg: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/victory-hand_270c.png",
+            answerTitle: "Easy",
+            description: "5 min/day",
+          },
+          {
+            urlImg: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/ok-hand-sign_1f44c.png",
+            answerTitle: "Common",
+            description: "10 min/day",
+          },
+          {
+            urlImg: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/raised-fist_270a.png",
+            answerTitle: "Serious",
+            description: "15 min/day",
+          },
+          {
+            urlImg: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/flexed-biceps_1f4aa.png",
+            answerTitle: "Intensive",
+            description: "20 min/day"
           },
         ],
       },
     ],
+    currentQuestion: 0,
   },
-  mutations:{},
+  mutations:{
+    setCurrentQuestion(state, currentQuestion){
+      state.currentQuestion = currentQuestion
+    }
+  },
   actions:{},
-  getters:{ questions: s => s.questions}
+  getters:{ 
+    questions: s => s.questions,
+    currentQuestion: s => s.currentQuestion
+  }
 };

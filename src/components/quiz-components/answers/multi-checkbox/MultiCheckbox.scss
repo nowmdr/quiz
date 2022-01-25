@@ -1,0 +1,57 @@
+@import '../../../../theme/variables.scss';
+.check.multi {
+    width: 100%;
+    height: 100%;
+    &-label {
+      display: block;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    &-input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      &:checked + .check-box {
+        .check-card {
+          background-color: $answer-background;
+          border-color: $answer-border;
+        }
+      }
+      &:hover + .check-box {
+        .check-card {
+          box-shadow: $custom-gray-shadow;
+        }
+      }
+    }
+    &-box {
+      height: 100%;
+    }
+    &-card {
+      display: flex;
+      justify-content: center;
+      @extend %check-card;
+      &__title {
+        @extend %card-title;
+      }
+      &__text {
+        color: $regular;
+      }
+      &__text-wrapper{
+      }
+      &__img {
+        width: 25%;
+        height: auto;
+        margin-bottom: 20px;
+        @include breakpoint(sm) {
+          width: 30%;
+          margin-bottom: 10px;
+        }
+      }
+      &__description {
+        @extend %card-description;
+      }
+    }
+  }

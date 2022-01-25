@@ -2,11 +2,8 @@
 .quiz-header {
   display: flex;
   align-items: center;
-  padding: 0 80px;
   height: 80px;
-  @include breakpoint(md) {
-    padding: 0 20px;
-  }
+  @extend %container;
 }
 .quiz-logo {
   svg {

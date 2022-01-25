@@ -1,0 +1,60 @@
+@import "../../../theme/variables.scss";
+.progress-nav{
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    &__wrapper{
+        display: flex;
+    justify-content: space-between;
+    }
+    &__btn{
+        display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    &:hover{
+        .btn-icon path{
+            fill: $answer-border;
+        }
+        .btn-text{
+            color: $answer-border;
+        }
+    }
+    .btn-icon{
+        margin-bottom: 4px;
+      & path {
+        transition: fill 0.3s ease, opacity 0.3s ease;
+      }
+    }
+    .btn-text{
+        color: $regular-ligth;
+      font-weight: 600;
+      transition: color 0.3s ease, opacity 0.3s ease;
+    }
+    }
+    
+    .count-area{
+        color: $regular-ligth;
+        .current-question, .all-question{
+            color: $regular-ligth;
+            @extend %font-size-regular;
+        }
+    }
+    .grey-line {
+        margin-top: 5px;
+        position: relative;
+        width: 100%;
+        height: 4px;
+        background-color: $gray-line;
+        border-radius: 2px;
+      }
+      .green-line {
+        position: absolute;
+        height: 4px;
+        background-color: $answer-border;
+        border-radius: 2px;
+        transition: width 0.2s ease-in-out;
+      }
+}

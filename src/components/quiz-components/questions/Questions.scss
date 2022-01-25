@@ -1,27 +1,31 @@
 @import "../../../theme/variables.scss";
-.question {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &__title {
-    @extend %question-title;
-  }
-  &__options {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-top: 20px;
-    & li {
-      width: 100%;
-      max-width: 250px;
-      padding: 0 10px;
-      @include breakpoint(md) {
-        max-width: 50%;
-        padding: 0 5px;
-      }
-    }
-  }
+.questions{
+  // @extend %container;
 }
+// .question {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   @extend %container;
+//   &__title {
+//     @extend %question-title;
+//   }
+//   &__options {
+//     width: 100%;
+//     display: flex;
+//     flex-wrap: nowrap;
+//     justify-content: center;
+//     margin-top: 20px;
+//     & li {
+//       width: 100%;
+//       max-width: 250px;
+//       padding: 0 10px;
+//       @include breakpoint(md) {
+//         max-width: 50%;
+//         padding: 0 5px;
+//       }
+//     }
+//   }
+// }
