@@ -1,39 +1,27 @@
 <template>
-  <div class="check multi">
-    <label class="check-label">
+  <div class="check-multi">
+    <label class="check-multi-label">
       <input
-        class="check-input"
+        class="check-multi-input"
         type="radio"
         :name="`${getQuestions[currentQuestion].title}`"
         :value="`${option.answerTitle || option.text}`"
         @click="nextQuestion"
       />
-      <div class="check-box">
-        <div :class="{'changed': mode}" class="check-card">
+      <div class="check-multi-box">
+        <div :class="{'changed': !option.urlImg }" class="check-multi-card">
           <img
             v-if="option.urlImg"
-            class="check-card__img"
+            class="check-multi-card__img"
             :src="`${option.urlImg}`"
             :alt="`${option.text}`"
           />
-          <img
-            v-if="option.text == 'Yes'"
-            class="check-card__img img-yes"
-            src="@/assets/emoji/yes-img.svg"
-            :alt="`${option.text}`"
-          />
-          <img
-            v-if="option.text == 'No'"
-            class="check-card__img img-no"
-            src="@/assets/emoji/no-img.svg"
-            :alt="`${option.text}`"
-          />
-          <p v-if="option.text" class="check-card__text">{{ option.text }}</p>
-          <div class="check-card__text-wrapper">
-            <h4 v-if="option.answerTitle" class="check-card__title">
+          <p v-if="option.text" class="check-multi-card__text">{{ option.text }}</p>
+          <div :class="{'changed': !option.urlImg }" class="check-multi-card__text-wrapper">
+            <h4 v-if="option.answerTitle" class="check-multi-card__title">
               {{ option.answerTitle }}
             </h4>
-            <p v-if="option.description" class="check-card__description">
+            <p v-if="option.description" class="check-multi-card__description">
               {{ option.description }}
             </p>
           </div>
@@ -43,7 +31,7 @@
   </div>
 </template>
 <script>
-import "../answer-checkbox/AnswerCheckbox.scss";
+import "../multi-checkbox/MultiCheckbox.scss";
 export default {
   props: {
     option: {

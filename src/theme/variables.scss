@@ -44,6 +44,14 @@ $main-small-mob: 12px;
     }
   }
 }
+@include breakpoint(lg) {
+}
+@include breakpoint(md) {
+}
+@include breakpoint(sm) {
+}
+@include breakpoint(xs) {
+}
 
 //fonts
 %font-size-regular {
@@ -57,6 +65,9 @@ $main-small-mob: 12px;
 }
 %font-size-title {
   font-size: $main-title;
+  @include breakpoint(md) {
+    font-size: $main-title-mob;
+  }
   @include breakpoint(sm) {
     font-size: $main-title-mob;
   }
@@ -152,6 +163,9 @@ $main-small-mob: 12px;
   color: $title;
   @extend %font-family-title;
   font-size: 28px;
+  @include breakpoint(md){
+    font-size: 22px;
+  }
 }
 %card-description{
     @extend %font-family-regular;

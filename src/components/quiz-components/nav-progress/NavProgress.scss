@@ -3,9 +3,31 @@
     max-width: 500px;
     margin: 0 auto;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(md) {
+      flex-direction: column-reverse;
+      padding: 0 20px;
+      padding-top: 10px;
+      max-width: 100%;
+    }
     &__wrapper{
         display: flex;
     justify-content: space-between;
+    @include breakpoint(md) {
+      margin-top: 10px;
+    }
+    }
+    &__logo{
+      svg {
+        display: none;
+        width: auto;
+        height: 40px;
+        @include breakpoint(md){
+          display: block;
+          height: 25px;
+        }
+      }
     }
     &__btn{
         display: flex;
@@ -34,7 +56,6 @@
       transition: color 0.3s ease, opacity 0.3s ease;
     }
     }
-    
     .count-area{
         color: $regular-ligth;
         .current-question, .all-question{

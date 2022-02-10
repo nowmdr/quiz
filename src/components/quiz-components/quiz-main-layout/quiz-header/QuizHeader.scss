@@ -4,6 +4,9 @@
   align-items: center;
   height: 80px;
   @extend %container;
+  @include breakpoint(md) {
+    display: none;
+  }
 }
 .quiz-logo {
   svg {
@@ -11,6 +14,9 @@
     height: 40px;
     @include breakpoint(md) {
       height: 32px;
+    }
+    @include breakpoint(sm){
+      height: 20px;
     }
   }
 }
