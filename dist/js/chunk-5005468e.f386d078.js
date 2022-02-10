@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-5005468e"],{"3f65":function(n,t,c){},cd56:function(n,t,c){"use strict";c.r(t);var e=c("7a23");function o(n,t,c,o,u,r){var i=Object(e["z"])("router-view");return Object(e["u"])(),Object(e["d"])(i)}c("3f65");var u={name:"Main",mounted:function(){this.$router.push("/quiz").catch((function(n){console.log(n)}))}},r=c("d959"),i=c.n(r);const a=i()(u,[["render",o]]);t["default"]=a}}]);
+//# sourceMappingURL=chunk-5005468e.f386d078.js.map
