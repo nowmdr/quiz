@@ -45,6 +45,47 @@ export default {
         ],
       },
       {
+        title: "Set up your goal!",
+        mode:true,
+        options: [
+          {
+            urlImg:"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/smiling-face-with-sunglasses_1f60e.png",
+            text: "Become the best version of yourself"
+          },
+          {
+            urlImg:"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/trophy_1f3c6.png",
+            text:"Achieve more in less time"
+          },
+        ],
+      },
+      {
+        title: "Who inspires you the most?",
+        mode:true,
+        multiple: true,
+        options: [
+          {
+            urlImg:"https://storage.googleapis.com/books-us.appspot.com/influencer%201.png",
+            text: "Steve Jobs",
+            multiple: true
+          },
+          {
+            urlImg:"https://storage.googleapis.com/books-us.appspot.com/influencer%201-1.png",
+            text:"Elon Musk",
+            multiple: true
+          },
+          {
+            urlImg:"https://storage.googleapis.com/books-us.appspot.com/influencer%201-2.png",
+            text:"Warren Buffet",
+            multiple: true
+          },
+          {
+            urlImg:"https://storage.googleapis.com/books-us.appspot.com/influencer%201-3.png",
+            text:"Oprah Winfrey",
+            multiple: true
+          },
+        ],
+      },
+      {
         title: "What is your age?",
         mode: true,
         options: [
