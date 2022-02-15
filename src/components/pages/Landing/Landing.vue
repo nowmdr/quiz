@@ -3,12 +3,7 @@
     <header class="header">
       <div class="header__wrapper">
         <div class="header__logo">
-          <svg
-            width="3617"
-            height="1500"
-            viewBox="0 0 3617 1500"
-            fill="none"
-          >
+          <svg width="3617" height="1500" viewBox="0 0 3617 1500" fill="none">
             <g clip-path="url(#r2bkmo25)">
               <path
                 d="M0 512C0 332.783 0 243.175 34.8779 174.723C65.5574 114.511 114.511 65.5574 174.723 34.8779C243.175 0 332.783 0 512 0H988C1167.22 0 1256.83 0 1325.28 34.8779C1385.49 65.5574 1434.44 114.511 1465.12 174.723C1500 243.175 1500 332.783 1500 512V988C1500 1167.22 1500 1256.83 1465.12 1325.28C1434.44 1385.49 1385.49 1434.44 1325.28 1465.12C1256.83 1500 1167.22 1500 988 1500H512C332.783 1500 243.175 1500 174.723 1465.12C114.511 1434.44 65.5574 1385.49 34.8779 1325.28C0 1256.83 0 1167.22 0 988V512Z"
@@ -159,6 +154,108 @@
           </div>
         </div>
       </section>
+      <section class="steps">
+        <div class="steps__container">
+          <h2 class="steps__title">How your plan was created</h2>
+          <ul class="steps__list">
+            <li class="steps__item">
+              <div class="steps__img">
+                <img src="@/assets/landing/books.png" alt="Books" />
+              </div>
+              <p class="steps__description">
+                Hand-picked 28 books specially for you from 10,000 bestselling
+                nonfiction books
+              </p>
+            </li>
+            <li class="steps__item">
+              <div class="steps__img">
+                <img src="@/assets/landing/Summary.png" alt="Summary" />
+              </div>
+              <p class="steps__description">
+                Created 15-min key insight summaries of bestselling nonfiction
+                books
+              </p>
+            </li>
+            <li class="steps__item">
+              <div class="steps__img">
+                <img src="@/assets/landing/Plan.png" alt="Plan" />
+              </div>
+              <p class="steps__description">
+                Composed your personalized Self-Growth Plan
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="books">
+        <div class="books__wrapper">
+          <div
+            :style="{
+              transform: `translate(${-smallScroll}%)`
+            }"
+            class="books__row books__row-1"
+          >
+            <img class="book" src="@/assets/books/row_1/b1.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b2.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b3.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b4.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b5.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b6.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b7.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b8.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b9.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b10.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b11.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b12.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b13.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b14.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b15.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_1/b16.jpg" alt="book" />
+          </div>
+          <div :style="{
+              transform: `translate(${smallScroll}%)`
+            }" class="books__row books__row-2">
+            <img class="book" src="@/assets/books/row_2/b1.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b2.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b3.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b4.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b5.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b6.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b7.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b8.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b9.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b10.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b11.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b12.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b13.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b14.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b15.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b16.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_2/b17.jpg" alt="book" />
+          </div>
+          <div :style="{
+              transform: `translate(${-smallScroll}%)`
+            }" class="books__row books__row-3">
+            <img class="book" src="@/assets/books/row_3/b1.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b2.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b3.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b4.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b5.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b6.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b7.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b8.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b9.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b10.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b11.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b12.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b13.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b14.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b15.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b16.jpg" alt="book" />
+            <img class="book" src="@/assets/books/row_3/b17.jpg" alt="book" />
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div>Foooter</div>
@@ -174,6 +271,21 @@ export default {
   components: {
     Graph,
     Bubble,
+  },
+  data: () => ({
+    smallScroll: 0,
+  }),
+  methods: {
+    scroll(e) {
+      console.log(e.target.documentElement.scrollTop);
+      this.smallScroll = e.target.documentElement.scrollTop / 90;
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.scroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.scroll);
   },
 };
 </script>
