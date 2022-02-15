@@ -1,10 +1,9 @@
 <template>
-  <div class="landing">
+  <div class="offer">
     <header class="header">
       <div class="header__wrapper">
         <div class="header__logo">
           <svg
-            class="styles-module--Logo--18nuJ"
             width="3617"
             height="1500"
             viewBox="0 0 3617 1500"
@@ -135,7 +134,7 @@
         <div class="plan__edge"></div>
         <div class="plan__container">
           <div class="plan__calendar calendar">
-            <div class="calendar__container">
+            <div class="calendar__wrapper">
               <img
                 class="calendar__image"
                 src="@/assets/landing/calendar.png"
@@ -167,12 +166,14 @@
   </div>
 </template>
 <script>
+import Bubble from "../../landing-components/bubble/Bubble.vue";
 import Graph from "../../landing-components/graph/Graph.vue";
 import "../Landing/Landing.scss";
 export default {
   name: "Landing",
   components: {
     Graph,
+    Bubble,
   },
 };
 </script>

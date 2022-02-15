@@ -1,26 +1,32 @@
 @import "../../../theme/variables.scss";
-.landing {
-  //   overflow: hidden;
+.offer {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 100%;
   height: 100vh;
   .header {
-    height: 56px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
     display: flex;
     align-items: center;
     background-color: $title;
+    @include mobile-point(md) {
+      padding-top: 30px;
+    }
     &__wrapper {
       padding-left: 20px;
       padding-right: 20px;
+      @include mobile-point(md) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
     }
     &__logo {
       svg {
         width: auto;
         height: 32px;
         @include mobile-point(md) {
+          height: 40px;
         }
         @include mobile-point(sm) {
         }
@@ -29,6 +35,7 @@
   }
   .main {
     flex: 1 1 auto;
+    position: relative;
     .summary {
       background-color: $title;
       padding-top: 30px;
@@ -38,7 +45,9 @@
         font-weight: 700;
         color: #fff;
         text-align: center;
-        margin-bottom: 5px;
+        @include mobile-point(md) {
+          font-size: 48px;
+        }
       }
       &__name {
         display: block;
@@ -47,11 +56,21 @@
         font-family: Abhaya Libre, serif;
         text-align: center;
         color: $button-background;
+        @include mobile-point(md) {
+          font-size: 48px;
+        }
       }
       &__graph {
-        //   width: 100%;
         margin: 0 auto;
         margin-top: 20px;
+        width: 100%;
+        @include mobile-point(xs) {
+          max-width: 400px;
+        }
+        @include mobile-point(md) {
+          max-width: 600px;
+          margin-top: 40px;
+        }
       }
     }
     .plan {
@@ -74,14 +93,32 @@
       &__container {
         display: flex;
         flex-direction: column;
+        @include mobile-point(md) {
+          flex-direction: row;
+        }
+      }
+      &__calendar{
+        @include mobile-point(md) {
+            flex: 0 1 50%;
+          }
+          
       }
       .calendar {
         margin-top: -100px;
-        &__container {
+        &__wrapper {
           position: relative;
           margin: 0 auto;
           width: 100%;
           max-width: 85%;
+          @include mobile-point(sm) {
+            max-width: 400px;
+          }
+          @include mobile-point(md) {
+            max-width: 300px;
+          }
+          @include mobile-point(lg) {
+            max-width: 350px;
+          }
         }
         &__image {
           position: relative;
@@ -96,11 +133,11 @@
         &__page {
           background-color: #fdfbf9;
           display: block;
-          width: 80%;
+          width: 100%;
           height: 100%;
           position: absolute;
           top: 0px;
-          left: 20px;
+          left: 0px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 17px;
           transition: transform 2s ease;
           &_1 {
@@ -117,37 +154,55 @@
           }
         }
       }
-      &__description{
+      &__description {
         margin-top: 40px;
-    }
+        @include mobile-point(md) {
+
+          }
+      }
       .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include mobile-point(md) {
+            align-items:flex-start;
+            flex: 0 1 50%;
+            margin-top: -10px;
+          }
         &__title {
           color: #293358;
           font-size: 30px;
           font-weight: 700;
           text-align: center;
-          margin-bottom: 5px;
+          margin-bottom: 15px;
+          @include mobile-point(md) {
+            font-size: 48px;
+            text-align: left;
+          }
         }
-        &__item{
-            position: relative;
-            padding-top: 4px;
-            padding-left: 32px;
-            margin-bottom: 16px;
-            @extend %font-family-regular;
-            color: $regular;
-            font-size: 14px;
-            &:before {
-              content: "";
-              position: absolute;
-              top: 2px;
-              left: 2px;
-              display: block;
-              width: 18px;
-              height: 18px;
-              background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTkiIHZpZXdCb3g9Ii0yIC0yIDIyIDIyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0yIDEwLjgyNjFMNi4yNjA4NyAxNkM4Ljk4MDYyIDkuNTE2NTMgMTEuMDcwMSA2LjM5OTMxIDE2IDIiIHN0cm9rZT0iI0Q1NkI1MCIgc3Ryb2tlLXdpZHRoPSIzIi8+PC9zdmc+)
-                50% no-repeat;
-              background-size: contain;
-            }
+        &__item {
+          position: relative;
+          padding-top: 4px;
+          padding-left: 32px;
+          margin-bottom: 16px;
+          @extend %font-family-regular;
+          color: $regular;
+          font-size: 14px;
+          @include mobile-point(md) {
+            font-size: 16px;
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            display: block;
+            width: 18px;
+            height: 18px;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTkiIHZpZXdCb3g9Ii0yIC0yIDIyIDIyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0yIDEwLjgyNjFMNi4yNjA4NyAxNkM4Ljk4MDYyIDkuNTE2NTMgMTEuMDcwMSA2LjM5OTMxIDE2IDIiIHN0cm9rZT0iI0Q1NkI1MCIgc3Ryb2tlLXdpZHRoPSIzIi8+PC9zdmc+)
+              50% no-repeat;
+            background-size: contain;
+          }
         }
       }
     }

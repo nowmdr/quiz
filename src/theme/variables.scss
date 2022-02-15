@@ -42,7 +42,7 @@ $main-small-mob: 12px;
       @content;
     }
   } @else if $point == xs {
-    @media (min-width: 320px) {
+    @media (min-width: 321px) {
       @content;
     }
   }
