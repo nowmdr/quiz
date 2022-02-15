@@ -16,7 +16,11 @@
             :src="`${option.urlImg}`"
             :alt="`${option.text}`"
           />
-          <p :class="{ changed: option.multiple }" v-if="option.text" class="check-multi-card__text">
+          <p
+            :class="{ changed: option.multiple }"
+            v-if="option.text"
+            class="check-multi-card__text"
+          >
             {{ option.text }}
           </p>
           <img
@@ -36,7 +40,10 @@
               {{ option.description }}
             </p>
           </div>
-          <div v-if="option.multiple" class="check-multi-card__check-box-container">
+          <div
+            v-if="option.multiple"
+            class="check-multi-card__check-box-container"
+          >
             <span class="check-multi-card__check-box">
               <svg
                 class="check-multi-card__check-mark"
@@ -71,8 +78,13 @@ export default {
   },
   methods: {
     nextQuestion(event) {
-      if (this.currentQuestion + 1 < this.allQuestions) {
-        this.$store.commit("setCurrentQuestion", ++this.currentQuestion);
+      if (option.multiple) {
+
+        this.$emit('check');
+      } else {
+        if (this.currentQuestion + 1 < this.allQuestions) {
+          this.$store.commit("setCurrentQuestion", ++this.currentQuestion);
+        }
       }
     },
   },

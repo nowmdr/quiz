@@ -14,7 +14,7 @@ const routes = [
       {
         path: '/landing',
         name: 'Landing',
-        component: () => import('@/views/Landing.vue'),
+        component: () => import('@/components/pages/Landing/Landing.vue'),
       }
       
     ]

@@ -25,3 +25,10 @@ p,span,a,div,ul,li{
 a {
   @extend %links;
 }
+[class*="__container"] {
+    padding-left: 20px;
+    padding-right: 20px;
+  // max-width: 1087px;
+  // margin: 0px auto;
+  // padding: 0px 15px;
+}

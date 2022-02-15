@@ -11,9 +11,10 @@
     <ul :class="{'changed': question.mode}" class="type-one__options">
       <li v-for="option in question.options" :key="option.key">
         <answer-checkbox v-if="!question.mode" :option="option"></answer-checkbox>
-        <multi-checkbox v-if="question.mode" :option="option"></multi-checkbox>
+        <multi-checkbox @check="checkFunc" v-if="question.mode" :option="option"></multi-checkbox>
       </li>
     </ul>
+    <button  class="type-one__button">Kek</button>
   </div>
 </template>
 <script>
@@ -31,6 +32,7 @@ export default {
   data: () => ({
     currentQuestion: 0,
     allQuestions: 0,
+    check : false
   }),
   created() {
     this.currentQuestion = this.getCuerrentQuestion;
@@ -49,5 +51,10 @@ export default {
       this.currentQuestion = this.getCuerrentQuestion;
     },
   },
+  methods:{
+    checkFunc(){
+      console.log(this.check)
+    }
+  }
 };
 </script>

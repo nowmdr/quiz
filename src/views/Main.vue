@@ -1,5 +1,4 @@
 <template>
-  
   <router-view />
 </template>
 
@@ -8,7 +7,7 @@ import '@/theme/main.scss'
 export default {
   name: 'Main',
   mounted(){
-    this.$router.push('/quiz').catch(err => {console.log(err)})
+    this.$router.push('/landing').catch(err => {console.log(err)})
   }
 }
 </script>
