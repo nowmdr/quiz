@@ -2,9 +2,10 @@
 .offer {
   display: flex;
   flex-direction: column;
-  position: relative;
+  // position: relative;
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
   .header {
     padding-top: 15px;
     display: flex;
@@ -264,29 +265,29 @@
         }
       }
     }
-    .books{
-        background-color: #fcf3ea;
-    padding-top: 50px;
-    padding-bottom: 900px;
-    &__wrapper{
-        overflow: hidden;
-    }
-    &__row{
-        display: flex;
-      margin-bottom: 30px;
-    }
-    .book{
-        display: block;
+    .books {
       background-color: #fcf3ea;
-      box-shadow: 0 2px 3px #ccada6;
-      margin-right: 25px;
-    //   width: 112px;
-    //   height: 172px;
-      width: 60px;
-      height: 90px;
-      transition: transform 0.5 ease;
-    }
-    &__row-1 {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      &__wrapper {
+        overflow: hidden;
+      }
+      &__row {
+        display: flex;
+        margin-bottom: 30px;
+      }
+      .book {
+        display: block;
+        background-color: #fcf3ea;
+        box-shadow: 0 2px 3px #ccada6;
+        margin-right: 25px;
+        //   width: 112px;
+        //   height: 172px;
+        width: 60px;
+        height: 90px;
+        transition: transform 0.5 ease;
+      }
+      &__row-1 {
         padding-top: 5px;
         .book {
           transform: translateX(-100px) rotate(-4deg) translateZ(0px);
@@ -297,11 +298,204 @@
           transform: translateX(-150px) rotate(4deg) translateZ(0px);
         }
       }
-  
+
       &__row-3 {
         .book {
           transform: translateX(-100px) rotate(-4deg) translateZ(0px);
           //will-change: transform;
+        }
+      }
+    }
+    .step-by-step {
+      background-color: #fcf3ea;
+      padding-top: 65px;
+      padding-bottom: 65px;
+      &__title {
+        width: 100%;
+        max-width: 500px;
+        color: #293358;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        @include mobile-point(md) {
+          font-size: 48px;
+          max-width: 600px;
+          margin-bottom: 25px;
+        }
+      }
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        height: 100%;
+        min-height: 300px;
+        justify-content: space-between;
+        @include mobile-point(sm) {
+          max-width: 350px;
+          min-height: 350px;
+        }
+        @include mobile-point(md) {
+          max-width: 700px;
+          min-height: 280px;
+        }
+        @include mobile-point(lg) {
+          max-width: 1000px;
+        }
+      }
+      &__item {
+        position: relative;
+        width: 50%;
+        @include mobile-point(md) {
+          width: 25%;
+        }
+      }
+      &__bubble {
+        top: 0;
+        left: -25px;
+        position: absolute;
+        width: 130%;
+        height: auto;
+        animation: spin 40s linear infinite;
+        @include mobile-point(lg) {
+          width: 120%;
+        }
+      }
+      &__content {
+        position: absolute;
+        top: 25px;
+        left: 10px;
+        @include mobile-point(sm) {
+          top: 35px;
+          left: 20px;
+        }
+        @include mobile-point(lg) {
+          top: 45px;
+          left: 40px;
+        }
+        & div {
+          opacity: 0.6;
+          margin-bottom: 16px;
+          font-size: 0.875rem;
+          line-height: 100%;
+          color: #fff;
+          font-family: Amiko, Roboto, sans-serif;
+          span {
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 50%;
+            vertical-align: top;
+            font-family: Abhaya Libre, serif;
+            @include mobile-point(md) {
+              font-size: 120px;
+            }
+          }
+        }
+        p {
+          font-size: 14px;
+          line-height: 140%;
+          color: #fff;
+          @include mobile-point(md) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .reviews {
+      background-color: #fcf3ea;
+      padding-top: 65px;
+      padding-bottom: 65px;
+      &__title {
+        width: 100%;
+        max-width: 500px;
+        color: #293358;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        @include mobile-point(md) {
+          font-size: 48px;
+          max-width: 600px;
+          margin-bottom: 25px;
+        }
+      }
+      &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include mobile-point(lg) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+      &__item {
+        margin-bottom: 20px;
+        @include mobile-point(lg) {
+          margin-bottom: 0;
+         }
+        &:last-child{
+          margin-bottom: 0;
+          @include mobile-point(lg) {
+            margin-bottom: 0;
+           }
+        }
+      }
+      .review {
+        padding: 16px;
+        background: #fff;
+        box-shadow: 0 12px 24px #e4d5c1;
+        border-radius: 12px;
+        @include mobile-point(sm) {
+          width: 100%;
+          max-width: 560px;
+        }
+        @include mobile-point(md) {
+          padding: 24px;
+          max-width: 600px;
+        }
+        @include mobile-point(lg) {
+          max-width: 100%;
+          width: 30%;
+        }
+        &__header{
+          display: flex;
+          margin-bottom: 10px;
+        }
+        &__img {
+          margin-right: 16px;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-color: #fcf3ea;
+        }
+        &__icon{
+          margin-left: auto;
+        }
+        &__data{
+          span{
+            font-size: 12px;
+            @include mobile-point(md) {
+              font-size: 14px;
+            }
+          }
+          p{
+            font-size: 10px;
+            color: #5b6280;
+            @include mobile-point(md) {
+              font-size: 12px;
+            }
+          }
+        }
+        &__text{
+          font-size: 12px;
+          line-height: 150%;
+          @include mobile-point(md) {
+            font-size: 14px;
+          }
         }
       }
     }
