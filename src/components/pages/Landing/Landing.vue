@@ -554,6 +554,7 @@
   </div>
 </template>
 <script>
+import e from 'express';
 import Bubble from "../../landing-components/bubble/Bubble.vue";
 import Graph from "../../landing-components/graph/Graph.vue";
 import "../Landing/Landing.scss";
@@ -573,10 +574,11 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener("scroll", this.scroll);
+    // window.addEventListener("scroll", this.scroll);
+    console.log('Hi')
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.scroll);
+    // window.removeEventListener("scroll", this.scroll);
   },
 };
 </script>
